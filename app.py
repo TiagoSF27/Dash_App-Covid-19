@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import pandas as pd
 
 app = Dash(__name__)
+server= app.server
 
 path = 'https://raw.githubusercontent.com/TiagoSF27/Dash_App-Covid-19/main/datasets/'
 
