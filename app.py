@@ -5,8 +5,10 @@ import pandas as pd
 
 app = Dash(__name__)
 
-df_country_vaccinations = pd.read_csv(r'https://github.com/TiagoSF27/Dash_App-Covid-19/datasets/country_vaccinations.csv')
-df_country_vaccinations_by_manufacturer = pd.read_csv(r'https://github.com/TiagoSF27/Dash_App-Covid-19/datasets/country_vaccinations_by_manufacturer.csv')
+path = 'https://raw.githubusercontent.com/TiagoSF27/Dash_App-Covid-19/main/datasets/'
+
+df_country_vaccinations = pd.read_csv(path + 'country_vaccinations.csv')
+df_country_vaccinations_by_manufacturer = pd.read_csv(path + 'country_vaccinations_by_manufacturer.csv')
 
 country_options = [dict(label=country, value=country)
                    for country in df_country_vaccinations['country'].unique()]
